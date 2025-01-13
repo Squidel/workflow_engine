@@ -69,6 +69,8 @@
     <Compile Include="StateMachine.cs" />
     <Compile Include="StateMachineFactory.cs" />
     <Compile Include="StateMachineRepo.cs" />
+    <Compile Include="Trigger.cs" />
+    <Compile Include="TriggerManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
