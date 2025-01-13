@@ -25,7 +25,7 @@ namespace FrameworkCompatibility
                 logMessage.AppendLine($"About to evaluate condition: {trigger.Condition.Method.Name}");
                 if (trigger.Condition(obj))
                 {
-                    logMessage.AppendLine($"  | trigger condition evaluated to true; about to execute {trigger.Action.Method.Name}"_;
+                    logMessage.AppendLine($"  | trigger condition evaluated to true; about to execute {trigger.Action.Method.Name}");
                     trigger.Action(obj);
                     logMessage.AppendLine($"  | executed {trigger.Action.Method.Name}");
                 }

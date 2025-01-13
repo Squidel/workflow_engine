@@ -31,6 +31,10 @@ namespace FrameworkCompatibility
         }
         public TransitionBuilder WithCondition(FilterDTO filter)
         {
+            if(_transition.Conditions == null)
+            {
+                _transition.Conditions = new List<FilterDTO>();
+            }
             _transition.Conditions.Add(filter);
             return this;
         }
