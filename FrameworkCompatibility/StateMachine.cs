@@ -54,7 +54,10 @@ namespace FrameworkCompatibility
 
         #endregion
         #region Methods
-
+        public TransitionBuilder DefineTransition()
+        {
+            return new TransitionBuilder(_repo);
+        }
         //TODO: add methods for getting all possible transitions
         public bool HasNextState(int currentState, out bool isError)
         {
