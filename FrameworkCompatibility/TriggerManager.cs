@@ -17,6 +17,12 @@ namespace FrameworkCompatibility
             _triggers.Add(new Trigger<T>(condition, action));
             return this;
         }
+
+        /// <summary>
+        /// Evaluates trigger and mutates object based on the evaluation
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
         public TriggerManager<T> EvaluateTriggers(T obj)
         {
             StringBuilder logMessage = new StringBuilder();
@@ -33,6 +39,8 @@ namespace FrameworkCompatibility
             }
             return this;
         }
+
+        /// TODO: add method to evaluate triggers, and return boolean value
 
         public List<string> GetLogs() => _logs;
     }

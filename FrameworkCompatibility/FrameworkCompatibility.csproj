@@ -68,6 +68,7 @@
     <Compile Include="QueryHelper.cs" />
     <Compile Include="StateMachine.cs" />
     <Compile Include="StateMachineFactory.cs" />
+    <Compile Include="StateMachineManager.cs" />
     <Compile Include="StateMachineRepo.cs" />
     <Compile Include="TransitionBuilder.cs" />
     <Compile Include="Trigger.cs" />

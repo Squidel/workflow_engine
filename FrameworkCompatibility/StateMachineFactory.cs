@@ -18,5 +18,12 @@ namespace FrameworkCompatibility
             // Return the StateMachine instance
             return new StateMachine(repo);
         }
+
+        public static StateMachineManager<T> Create<T>(string connectionString)
+        {
+            var sm = StateMachineFactory.Create(connectionString);
+            return new StateMachineManager<T>(sm);
+        }
+
     }
 }

@@ -14,7 +14,7 @@ namespace FrameworkCompatibility
     {
         static void Main(string[] args)
         {
-            var sm = StateMachineFactory.Create("data source=FMDBDEV\\FMSQL;initial catalog=FundManager_UDC_Test;user id=delacon2;password=pa$$word;MultipleActiveResultSets=True;TrustServerCertificate=True");
+            var sm = StateMachineFactory.Create<object>("data source=FMDBDEV\\FMSQL;initial catalog=FundManager_UDC_Test;user id=delacon2;password=pa$$word;MultipleActiveResultSets=True;TrustServerCertificate=True");
 
             Console.WriteLine("StateMachine Created");
             //dynamic so = new ExpandoObject();
