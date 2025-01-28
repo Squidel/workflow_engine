@@ -27,11 +27,21 @@ namespace FrameworkCompatibility
             var request = new State();
             request.StateId = 21;
             var all = new List<State>();
-            sm.PerformTransition(entities, so, 6, request, all, (context, rec, nextState, related) =>
-             {
-                 Console.WriteLine("I've performed the action");
-             });
+            //sm.PerformTransition(entities, so, 6, request, all, (context, rec, nextState, related) =>
+            // {
+            //     Console.WriteLine("I've performed the action");
+            // });
             Console.WriteLine("Get Next State");
+            try
+            {
+                //var transition = sm.DefineTransition().ToState(5).Build();
+                var transition2 = sm.DefineTransition().ToState(22).FromState(23).WithCondition(new Models.DTO.FilterDTO { IsActive = true, LogicalOperator = "AND", Operator = "==", PropertyName="TestProp", Value="1000"}).Build();
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
             //Console.WriteLine(test.Id.ToString());
 
             

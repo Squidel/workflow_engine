@@ -1,9 +1,11 @@
 # StateMachine Library
 
 ## Overview
+
 The **StateMachine Library** is a flexible, extendable, and fluent .NET library for managing state transitions, evaluating conditions, and triggering actions based on the state of an object. The library supports dynamic state transitions, condition evaluations, and trigger-based mechanisms for automating workflows.
 
 ### Key Features
+
 - Manage state transitions with conditions stored in a database or defined in code.
 - Evaluate object conditions dynamically using expressions.
 - Trigger actions based on conditions with automatic logging and notification support.
@@ -13,6 +15,7 @@ The **StateMachine Library** is a flexible, extendable, and fluent .NET library 
 ---
 
 ## Installation
+
 1. Clone the repository:
    ```bash
    git clone https://github.com/your-repo-url.git
@@ -23,8 +26,11 @@ The **StateMachine Library** is a flexible, extendable, and fluent .NET library 
 ---
 
 ## Getting Started
+
 ### Define a State Transition
+
 Use the `StateMachine` class to define a state transition:
+
 ```csharp
 var stateMachine = new StateMachine();
 
@@ -34,7 +40,9 @@ stateMachine.AddTransition("Pending", "Approved")
 ```
 
 ### Evaluate Triggers
+
 To evaluate a set of triggers:
+
 ```csharp
 var triggerManager = new TriggerManager();
 
@@ -47,7 +55,9 @@ triggerManager.EvaluateTriggers(myObject);
 ```
 
 ### Get Previous State
+
 Use the `GetPreviousState` method to retrieve the previous state of a record:
+
 ```csharp
 var previousState = stateMachine.GetPreviousState(myObject);
 ```
@@ -55,7 +65,9 @@ var previousState = stateMachine.GetPreviousState(myObject);
 ---
 
 ## Fluent API Usage
+
 The library provides a fluent API for configuring transitions and triggers:
+
 ```csharp
 var stateMachine = new StateMachine()
     .AddTransition("Draft", "Submitted")
@@ -69,8 +81,11 @@ var stateMachine = new StateMachine()
 ---
 
 ## Advanced Features
-### Notifications
+
+### TODO: Notifications
+
 You can add notifications that will be triggered when a condition is met:
+
 ```csharp
 triggerManager.AddTrigger(
     obj => obj.Status == "Pending",
@@ -79,7 +94,9 @@ triggerManager.AddTrigger(
 ```
 
 ### Automatic Logging
+
 Enable automatic logging of state transitions and actions:
+
 ```csharp
 stateMachine.EnableLogging(log => Console.WriteLine(log));
 ```
@@ -87,7 +104,9 @@ stateMachine.EnableLogging(log => Console.WriteLine(log));
 ---
 
 ## Customization
+
 You can extend the library by:
+
 - Adding custom conditions.
 - Creating custom triggers.
 - Implementing additional logging mechanisms.
@@ -96,7 +115,9 @@ You can extend the library by:
 ---
 
 ## Example Workflow
+
 Here’s an example of using the library to manage a bid evaluation workflow:
+
 ```csharp
 var stateMachine = new StateMachine();
 
@@ -114,6 +135,7 @@ stateMachine.EvaluateTriggers(bidObject);
 ---
 
 ## Best Practices
+
 - Use meaningful state names and conditions to ensure clarity in your workflows.
 - Utilize logging to track state changes and triggers for debugging purposes.
 - Keep triggers modular and reusable.
@@ -121,7 +143,9 @@ stateMachine.EvaluateTriggers(bidObject);
 ---
 
 ## Contributing
+
 Contributions are welcome! Please follow these steps:
+
 1. Fork the repository.
 2. Create a new branch for your feature or bugfix.
 3. Submit a pull request for review.
@@ -129,10 +153,11 @@ Contributions are welcome! Please follow these steps:
 ---
 
 ## License
+
 This project is licensed under the [MIT License](LICENSE).
 
 ---
 
 ## Contact
-For any questions or feedback, please contact [your-email@example.com].
 
+For any questions or feedback, please contact [your-email@example.com].
